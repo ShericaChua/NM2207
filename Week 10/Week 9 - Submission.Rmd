@@ -1,0 +1,33 @@
+---
+title: "Week 10 - Submission"
+author: "Sherica Chua"
+date: "2023-10-25"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+1. What is the question that you are going to answer? (Answer: One sentence that ends with a question mark that could act like the title of your data story)
+
+> "How has the tree population in San Francisco changed over the past decade?"
+
+2. Why is this an important question? (Answer: 3 sentences, each of which has some evidence, e.g., “According to the United Nations...” to justify why the question you have chosen is important)
+
+> According to studies on urban forestry and sustainability, the state of a city's tree population can significantly impact the environment, air quality, and overall well-being of its residents. For instance, research by the United Nations has shown that urban green spaces, including trees, are vital for mitigating climate change. This question is important because understanding how San Francisco's tree population has evolved is crucial for assessing the city's progress in environmental sustainability and urban planning, which has wide-reaching effects on residents' quality of life.
+
+3. Which rows and columns of the dataset will be used to answer this question? (Answer: Actual names of the variables in the dataset that you plan to use)
+
+>    To answer this question, I plan to use the following variables from the dataset:
+     - `tree_id`: A unique identifier for each tree.
+     - `species_name`: The species of the tree.
+     - `plant_date`: The date when the tree was planted.
+     - `dbh`: The diameter at breast height, indicating the tree's size and growth.
+     - `site_info`: Information about the tree's location, including neighborhood and address.
+     - `longitude` and `latitude`: Geographic coordinates to create interactive maps.
+     
+Challenges and Errors:
+
+> Challenge: - searching for the decent question to start with, and setting names of the vaiables in the dataset. This allows me to understand better of the importance of linking the questions to dataset and to have to plan ahead what I will be using in to show my datas.
