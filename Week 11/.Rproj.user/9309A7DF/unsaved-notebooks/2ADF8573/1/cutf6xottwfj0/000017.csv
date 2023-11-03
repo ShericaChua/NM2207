@@ -1,0 +1,3 @@
+"0","out.height= ""500px"" out.width=""500px"",fig.cap=""Graph 1""} knitr::include_graphics(""graph"")"
+"2","Error: unexpected symbol in ""out.height= ""500px"" out.width""
+"
