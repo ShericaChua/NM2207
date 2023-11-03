@@ -64,4 +64,4 @@ kable(df, format = "markdown")
      
 Challenges and Errors:
 
-> Challenge: 
+> Challenge: Having difficulty to create the graph I want to do.
