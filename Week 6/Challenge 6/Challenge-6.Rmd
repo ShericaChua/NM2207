@@ -1,0 +1,81 @@
+---
+title: "Challenge-6"
+author: "Sherica Chua"
+date: "20/09/2023"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Questions
+<br>
+
+#### Question-1: Countdown Blastoff (While Loop)
+
+Create a program that simulates a rocket launch countdown using a while loop. Start from 10 and countdown to "Blastoff!" with a one-second delay between each countdown number. Print a message when the rocket launches.
+
+**Hint:** You may want to use `cat` command to print the countdown and `Sys.sleep` for incorporating the delay
+
+**Output preview:** Here is how the countdown could look like 
+**Solutions:**
+
+```{r, eval=T,echo=TRUE}
+# Enter code here
+# Function to simulate rocket launch countdown
+countdown_to_blastoff <- function() {
+  countdown <- 10
+  
+  while (countdown > 0) {
+    cat(countdown, "... ", sep = "")
+    Sys.sleep(1)  # Delay for 1 second
+    countdown <- countdown - 1
+  }
+  
+  cat("Blastoff!\n")
+}
+
+# Call the function to start the countdown
+countdown_to_blastoff()
+
+```
+<br>
+
+#### Question-2: Word Reverser (for Loop)
+
+Develop a program that takes a user-entered word and uses a while loop to print the word's characters in reverse order. For example, if the user enters "hello," the program should print "olleh."
+
+**Hint:** You may want to use `substr` command to access each character of the input word, and `paste` command to join the reversed letters one at a time
+
+**Solutions:** 
+
+```{r, eval=T,echo=TRUE}
+# Enter code here
+# Function to reverse and print a user-entered word
+reverse_and_print_word <- function() {
+  # Prompt the user to enter a word
+  word <- readline(prompt = "Enter a word: ")
+  
+  reversed_word <- ""  # Initialize an empty string to store the reversed word
+  word_length <- nchar(word)  # Get the length of the input word
+  i <- word_length  # Initialize i to the length of the word
+  
+  while (i > 0) {
+    # Use substr to extract the i-th character from the word
+    letter <- substr(word, i, i)
+    
+    # Concatenate the letter to the reversed_word
+    reversed_word <- paste(reversed_word, letter, sep = "")
+    
+    i <- i - 1  # Decrement i to move to the previous character
+  }
+  
+  cat("Reversed word: ", reversed_word, "\n")
+}
+
+# Call the function to reverse and print the user-entered word
+reverse_and_print_word()
+
+```
+<br>

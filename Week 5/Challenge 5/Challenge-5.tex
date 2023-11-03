@@ -1,0 +1,386 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Challenge-5},
+  pdfauthor={Sherica Chua},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Challenge-5}
+\author{Sherica Chua}
+\date{13/09/2023}
+
+\begin{document}
+\maketitle
+
+\hypertarget{questions}{%
+\subsection{Questions}\label{questions}}
+
+\hypertarget{question-1-local-variable-shadowing}{%
+\paragraph{Question-1: Local Variable
+Shadowing}\label{question-1-local-variable-shadowing}}
+
+Create an R function that defines a global variable called \texttt{x}
+with a value of 5. Inside the function, declare a local variable also
+named \texttt{x} with a value of 10. Print the value of \texttt{x} both
+inside and outside the function to demonstrate shadowing.
+
+\textbf{Solutions:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Enter code here}
+\NormalTok{x}\OtherTok{\textless{}{-}}\DecValTok{5}
+\NormalTok{foo}\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{() \{}
+\NormalTok{  x}\OtherTok{\textless{}{-}}\DecValTok{10}
+  \FunctionTok{print}\NormalTok{(x)}
+\NormalTok{\}}
+\FunctionTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{foo}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10
+\end{verbatim}
+
+\hypertarget{question-2-modify-global-variable}{%
+\paragraph{Question-2: Modify Global
+Variable}\label{question-2-modify-global-variable}}
+
+Create an R function that takes an argument and adds it to a global
+variable called \texttt{total}. Call the function multiple times with
+different arguments to accumulate the values in \texttt{total}.
+
+\textbf{Solutions:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Enter code here}
+\NormalTok{x}\OtherTok{\textless{}{-}}\DecValTok{5}
+\NormalTok{total}\OtherTok{\textless{}{-}}\DecValTok{4}
+\NormalTok{add\_to}\OtherTok{\textless{}{-}}\ControlFlowTok{function}\NormalTok{(x)\{}
+\NormalTok{  total}\OtherTok{\textless{}\textless{}{-}}\NormalTok{x}\SpecialCharTok{+}\NormalTok{total}
+\NormalTok{\}}
+\FunctionTok{add\_to}\NormalTok{(}\DecValTok{5}\NormalTok{)}
+\FunctionTok{print}\NormalTok{(total)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 9
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{add\_to}\NormalTok{(}\DecValTok{10}\NormalTok{)}
+\FunctionTok{print}\NormalTok{(total)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 19
+\end{verbatim}
+
+\hypertarget{question-3-global-and-local-interaction}{%
+\paragraph{Question-3: Global and Local
+Interaction}\label{question-3-global-and-local-interaction}}
+
+Write an R program that includes a global variable \texttt{total} with
+an initial value of 100. Create a function that takes an argument, adds
+it to \texttt{total}, and returns the updated \texttt{total}.
+Demonstrate how this function interacts with the global variable.
+
+\textbf{Solutions:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Enter code here}
+\NormalTok{total}\OtherTok{\textless{}{-}}\DecValTok{100}
+\NormalTok{add}\OtherTok{\textless{}{-}}\DecValTok{5}
+
+\NormalTok{new\_total}\OtherTok{\textless{}{-}}\ControlFlowTok{function}\NormalTok{(add)\{}
+\NormalTok{  total}\OtherTok{\textless{}\textless{}{-}}\NormalTok{total}\SpecialCharTok{+}\NormalTok{add}
+\NormalTok{\}}
+\FunctionTok{new\_total}\NormalTok{(}\DecValTok{5}\NormalTok{)}
+\NormalTok{total}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 105
+\end{verbatim}
+
+\hypertarget{question-4-nested-functions}{%
+\paragraph{Question-4: Nested
+Functions}\label{question-4-nested-functions}}
+
+Define a function \texttt{outer\_function} that declares a local
+variable \texttt{x} with a value of 5. Inside \texttt{outer\_function},
+define another function \texttt{inner\_function} that prints the value
+of \texttt{x}. Call both functions to show how the inner function
+accesses the variable from the outer function's scope.
+
+\textbf{Solutions:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Enter code here}
+\NormalTok{Outer\_func }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{() \{}
+\NormalTok{  x}\OtherTok{\textless{}{-}}\DecValTok{5}
+\NormalTok{  Inner\_func }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{() \{}
+    \FunctionTok{print}\NormalTok{(x)}
+\NormalTok{  \}}
+  \FunctionTok{Inner\_func}\NormalTok{()}
+\NormalTok{\}}
+\FunctionTok{Outer\_func}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 5
+\end{verbatim}
+
+\hypertarget{question-5-meme-generator-function}{%
+\paragraph{Question-5: Meme Generator
+Function}\label{question-5-meme-generator-function}}
+
+Create a function that takes a text input and generates a humorous meme
+with the text overlaid on an image of your choice. You can use the
+\texttt{magick} package for image manipulation. You can find more
+details about the commands offered by the package, with some examples of
+annotating images here:
+\url{https://cran.r-project.org/web/packages/magick/vignettes/intro.html}
+
+\textbf{Solutions:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Enter code here}
+
+\FunctionTok{library}\NormalTok{(magick)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Linking to ImageMagick 6.9.12.93
+## Enabled features: cairo, freetype, fftw, ghostscript, heic, lcms, pango, raw, rsvg, webp
+## Disabled features: fontconfig, x11
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(magick}\SpecialCharTok{::}\FunctionTok{magick\_config}\NormalTok{())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## List of 24
+##  $ version           :Class 'numeric_version'  hidden list of 1
+##   ..$ : int [1:4] 6 9 12 93
+##  $ modules           : logi FALSE
+##  $ cairo             : logi TRUE
+##  $ fontconfig        : logi FALSE
+##  $ freetype          : logi TRUE
+##  $ fftw              : logi TRUE
+##  $ ghostscript       : logi TRUE
+##  $ heic              : logi TRUE
+##  $ jpeg              : logi TRUE
+##  $ lcms              : logi TRUE
+##  $ libopenjp2        : logi TRUE
+##  $ lzma              : logi TRUE
+##  $ pangocairo        : logi TRUE
+##  $ pango             : logi TRUE
+##  $ png               : logi TRUE
+##  $ raw               : logi TRUE
+##  $ rsvg              : logi TRUE
+##  $ tiff              : logi TRUE
+##  $ webp              : logi TRUE
+##  $ wmf               : logi FALSE
+##  $ x11               : logi FALSE
+##  $ xml               : logi TRUE
+##  $ zero-configuration: logi TRUE
+##  $ threads           : int 1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Meme }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(path) \{}
+\NormalTok{  frink}\OtherTok{\textless{}{-}}\FunctionTok{image\_read}\NormalTok{(path)}
+\FunctionTok{image\_annotate}\NormalTok{(frink, }\StringTok{"CONFIDENTIAL"}\NormalTok{, }\AttributeTok{size =} \DecValTok{30}\NormalTok{, }\AttributeTok{color =} \StringTok{"red"}\NormalTok{, }\AttributeTok{boxcolor =} \StringTok{"pink"}\NormalTok{,}
+  \AttributeTok{degrees =} \DecValTok{60}\NormalTok{, }\AttributeTok{location =} \StringTok{"+50+100"}\NormalTok{)}
+\NormalTok{\}}
+
+\FunctionTok{Meme}\NormalTok{(}\StringTok{"https://jeroen.github.io/images/frink.png"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Challenge-5_files/figure-latex/unnamed-chunk-5-1.png}
+
+\hypertarget{question-6-text-analysis-game}{%
+\paragraph{Question-6: Text Analysis
+Game}\label{question-6-text-analysis-game}}
+
+Develop a text analysis game in which the user inputs a sentence, and
+the R function provides statistics like the number of words, characters,
+and average word length. Reward the user with a ``communication skill
+level'' based on their input.
+
+\textbf{Solutions:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Enter code here}
+
+\CommentTok{\# Function to calculate communication skill level}
+\NormalTok{calculate\_skill\_level }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(avg\_word\_length) \{}
+  \ControlFlowTok{if}\NormalTok{ (avg\_word\_length }\SpecialCharTok{\textgreater{}=} \DecValTok{6}\NormalTok{) \{}
+    \FunctionTok{return}\NormalTok{(}\StringTok{"Advanced"}\NormalTok{)}
+\NormalTok{  \} }\ControlFlowTok{else} \ControlFlowTok{if}\NormalTok{ (avg\_word\_length }\SpecialCharTok{\textgreater{}=} \DecValTok{4}\NormalTok{) \{}
+    \FunctionTok{return}\NormalTok{(}\StringTok{"Intermediate"}\NormalTok{)}
+\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
+    \FunctionTok{return}\NormalTok{(}\StringTok{"Beginner"}\NormalTok{)}
+\NormalTok{  \}}
+\NormalTok{\}}
+
+\CommentTok{\# Function to play the text analysis game}
+\NormalTok{play\_text\_analysis\_game }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{() \{}
+  \FunctionTok{cat}\NormalTok{(}\StringTok{"Welcome to the Text Analysis Game!}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+  \FunctionTok{cat}\NormalTok{(}\StringTok{"Enter a sentence, and I will provide you with statistics and your communication skill level.}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+  
+  \CommentTok{\# Get user input}
+\NormalTok{  sentence }\OtherTok{\textless{}{-}} \FunctionTok{readline}\NormalTok{(}\AttributeTok{prompt =} \StringTok{"Enter a sentence: "}\NormalTok{)}
+  
+  \CommentTok{\# Calculate statistics}
+\NormalTok{  words }\OtherTok{\textless{}{-}} \FunctionTok{unlist}\NormalTok{(}\FunctionTok{strsplit}\NormalTok{(sentence, }\StringTok{" "}\NormalTok{))}
+\NormalTok{  num\_words }\OtherTok{\textless{}{-}} \FunctionTok{length}\NormalTok{(words)}
+\NormalTok{  num\_characters }\OtherTok{\textless{}{-}} \FunctionTok{nchar}\NormalTok{(sentence)}
+\NormalTok{  avg\_word\_length }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(}\FunctionTok{nchar}\NormalTok{(words))}
+  
+  \FunctionTok{cat}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{{-}{-}{-} Text Statistics {-}{-}{-}}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+  \FunctionTok{cat}\NormalTok{(}\StringTok{"Number of words:"}\NormalTok{, num\_words, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+  \FunctionTok{cat}\NormalTok{(}\StringTok{"Number of characters:"}\NormalTok{, num\_characters, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+  \FunctionTok{cat}\NormalTok{(}\StringTok{"Average word length:"}\NormalTok{, avg\_word\_length, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+  
+  \CommentTok{\# Calculate and display communication skill level}
+\NormalTok{  skill\_level }\OtherTok{\textless{}{-}} \FunctionTok{calculate\_skill\_level}\NormalTok{(avg\_word\_length)}
+  \FunctionTok{cat}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{{-}{-}{-} Communication Skill Level {-}{-}{-}}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+  \FunctionTok{cat}\NormalTok{(}\StringTok{"Your communication skill level is:"}\NormalTok{, skill\_level, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\NormalTok{\}}
+
+\CommentTok{\# Play the game}
+\FunctionTok{play\_text\_analysis\_game}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+
+\end{document}
