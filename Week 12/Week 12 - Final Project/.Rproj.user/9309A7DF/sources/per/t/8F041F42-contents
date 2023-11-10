@@ -1,0 +1,63 @@
+---
+title: "Week 12 - Final Project"
+author: "Sherica Chua"
+date: "2023-11-10"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1. List the visualizations that you are going to use in your project (Answer: What are the variables that you are going to plot? How will it answer your larger question?)
+
+> Number of different species per year - Biodiversity Trends: Analyzing changes in the number of different species over the years can help understand the overall biodiversity in a particular area. A decrease in species diversity might indicate environmental issues or habitat loss, while an increase could suggest conservation efforts or habitat restoration.
+
+
+> Number of trees planted each year - Environmental Impact: Tracking the number of trees planted annually can provide insights into environmental conservation efforts. It can be an indicator of initiatives to combat deforestation, enhance green spaces, or address climate change through carbon sequestration.
+
+> Top 9 most common San Francisco Trees Species - Urban Planning and Management: This information can be valuable for urban planners and policymakers in making decisions about tree planting initiatives, maintenance, and addressing potential issues like invasive species or diseases affecting the most common species.
+
+
+2. How do you plan to make it interactive? (Answer: features of ggplot2/shiny/markdown do you plan to use to make the story interactive)
+
+>  Trying to make a fuction to open up the Top 9 San Francisco Trees Graph when selected.
+
+3. What concepts incorporated in your project were taught in the course and which ones were self-learnt? (Answer: Create a table with topics in one column and Weeks in the other to indicate which concept taught in which week is being used. Leave the entry of the Week column empty for self-learnt concepts)
+
+```{r, eval=TRUE,echo=TRUE}
+# Enter code here
+# Load the required packages
+library(knitr)
+
+# Create a data frame with the topics, weeks, and learning type
+topics <- c(
+  "Introduce to Radiant",
+  "Data & Visualization",
+  "Variables & its types",
+  "Manipulating data",
+  "Functions",
+  "Iterations Vs. Vectorized codes",
+  "Visualizing data",
+  "Introduction to Shiny",
+  "Exploratory data analyses",
+  "Start up responsive web applications with diary entry",
+  "Building interactive web applications with Shiny",
+  "Customizing ggplot2 plots",
+  "Explore in using ggmap,osmdata,lubridate and viridis"
+)
+
+weeks <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, "", "", "", "")
+learning_type <- c("Taught", "Taught", "Taught", "Taught", "Taught", "Taught", "Taught", "Taught", "Taught", "Self-learned", "Self-learned", "Self-learned", "Self-learned")
+
+df <- data.frame(Topic = topics, Week = weeks, Learning_Type = learning_type)
+
+# Create the table using kable
+kable(df, format = "markdown")
+
+```
+
+     
+Challenges and Errors:
+
+> Challenge: Errors on not able to view graghs as I use incorrect codes.

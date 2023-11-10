@@ -1,0 +1,67 @@
+---
+title: "Week 11- Final Project"
+author: "Sherica Chua"
+date: "2023-11-01"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+1. List the visualizations that you are going to use in your project (Answer: What are the variables that you are going to plot? How will it answer your larger question?)
+
+> - Bar Chart of Top Tree Species by Count:
+Variables: Tree species (x-axis) and the count of each species (y-axis).
+This visualization will help you identify the most common tree species in San Francisco.
+  - Histogram of Tree Species Counts:
+Variable: The count of tree species.
+This will show the distribution of tree species counts, giving insights into the spread of counts.
+  - Map Plot of Tree Species Locations:
+Variables: Latitude and longitude of tree species locations.
+This map can help you visualize the geographic distribution of different tree species in San Francisco.
+
+
+2. How do you plan to make it interactive? (Answer: features of ggplot2/shiny/markdown do you plan to use to make the story interactive)
+
+>  To make the project interactive, I will use the Shiny framework in Radiant. I will create interactive elements that allow users to filter and explore the data. For example, users will be able to select specific tree species, neighborhoods, or time periods to update the visualizations dynamically.
+
+3. What concepts incorporated in your project were taught in the course and which ones were self-learnt? (Answer: Create a table with topics in one column and Weeks in the other to indicate which concept taught in which week is being used. Leave the entry of the Week column empty for self-learnt concepts)
+
+```{r, eval=TRUE,echo=TRUE}
+# Enter code here
+# Load the required packages
+library(knitr)
+
+# Create a data frame with the topics, weeks, and learning type
+topics <- c(
+  "Introduce to Radiant",
+  "Data & Visualization",
+  "Variables & its types",
+  "Manipulating data",
+  "Functions",
+  "Iterations Vs. Vectorized codes",
+  "Visualizing data",
+  "Introduction to Shiny",
+  "Exploratory data analyses",
+  "Start up responsive web applications with diary entry",
+  "Building interactive web applications with Shiny",
+  "Customizing ggplot2 plots"
+)
+
+weeks <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, "", "", "")
+learning_type <- c("Taught", "Taught", "Taught", "Taught", "Taught", "Taught", "Taught", "Taught", "Taught", "Self-learned", "Self-learned", "Self-learned")
+
+df <- data.frame(Topic = topics, Week = weeks, Learning_Type = learning_type)
+
+# Create the table using kable
+kable(df, format = "markdown")
+
+
+```
+
+     
+Challenges and Errors:
+
+> Challenge:Unable to solve my issues on interactive graphs
