@@ -1,0 +1,41 @@
+---
+title: "Week 13- Final Project Documentation"
+author: "Sherica Chua"
+date: "2023-11-22"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Final Project Documentation (jounal)
+
+> Embarking on the journey of creating a website exploring the changes in San Francisco's tree population over the past decade has been a captivating and enlightening experience. This reflective essay delves into my progression, leveraging the knowledge acquired from lessons and self-learning, the challenges encountered, and the meaningful insights derived from the data.
+The journey commenced with the identification of the overarching theme—San Francisco Trees—a topic that immediately resonated with the intersection of urban ecology, sustainability, and data science. The foundation was laid with meticulous curation of data from the TidyTuesday project, which provided a rich dataset encapsulating various facets of the city's tree population. The data, sourced from a GitHub repository, offered variables such as tree species, planting dates, geographic coordinates, and more, forming the bedrock for the subsequent analyses and visualizations.
+
+>The pivotal question driving the project—how the tree population in San Francisco has evolved over the past decade—carried immense significance. In delving into this question, I recognized the broader implications of urban forestry on environmental health, air quality, and community well-being. The importance of this inquiry aligned with global conversations on climate change mitigation and sustainable urban development, elevating the project beyond a mere exploration of data to a meaningful contribution to the discourse on urban ecology.
+
+>The initial steps involved understanding the dataset's structure and variables. The selection of pertinent columns such as tree_id, species_name, plant_date, dbh, site_info, longitude, and latitude laid the groundwork for a comprehensive exploration. This step required not only technical proficiency but also a conceptual understanding of the factors that could contribute to a holistic analysis of the city's tree population.
+
+>Challenges arose early in the process, especially when dealing with geographic data, including latitude and longitude coordinates. Mapping these coordinates accurately was crucial for depicting the spatial distribution of trees. Overcoming this challenge involved delving into the R programming language and leveraging packages like 'ggplot2' and 'leaflet' to create accurate and visually appealing geographic visualizations. Tutorials and documentation specific to working with geographic data proved invaluable in navigating this challenge, highlighting the importance of seeking external resources in the learning process.
+
+>Another significant challenge lay in incorporating interactivity into the project using the Shiny framework. Shiny provided the means to create a responsive and dynamic user interface, allowing users to filter and explore the data interactively. This facet required a blend of technical skills and an understanding of user experience principles to ensure a seamless and intuitive interface. The process involved referencing course materials on Shiny and responsive web design, but it also necessitated a degree of self-learning to fine-tune the interactive features and enhance the overall user experience.
+
+>As the project progressed into subsequent weeks, the incorporation of visualizations became central to conveying the story of San Francisco's changing tree landscape. The choice of visualizations was deliberate—time series line charts, bar charts, and geographic maps. These visualizations, implemented using the 'ggplot2' library and Radiant software, were selected for their ability to succinctly convey temporal trends, species distribution, and spatial patterns, respectively.
+
+>The decision to make the project interactive was strategic, aligning with the principles of effective data communication. Shiny's capabilities were harnessed to allow users to dynamically explore the data. The creation of an interface with dropdowns and filters empowered users to focus on specific aspects of the tree population, enhancing the project's accessibility and user engagement.
+
+>The concepts incorporated into the project were diverse and reflected the breadth of knowledge acquired throughout the course. Data visualization principles using 'ggplot2' formed the basis for crafting aesthetically pleasing and informative plots. The transition to Shiny marked a progression into the realm of interactive web applications, enabling a deeper level of engagement with the data. The integration of dynamic reports with Markdown showcased the ability to create compelling narratives within the project. Customizing 'ggplot2' plots, building responsive web applications, and incorporating interactivity in Shiny apps were all fundamental skills drawn upon to bring the project to fruition.
+
+>The thematic progression of the project from its inception to the final weeks showcased a maturation in both technical skills and a deeper understanding of the intricacies involved in data storytelling. The transition from individual visualizations to a cohesive data story centered around the theme of "San Francisco's Changing Tree Landscape: A Decade of Growth and Diversity" underscored the evolving narrative crafted from the dataset.
+
+>The insights derived from the data were profound and aligned with the initial question. The time series line chart revealed trends in tree planting, pointing towards specific years of notable increase or decrease. This temporal analysis provided a lens into the city's response to environmental challenges and policy changes. The bar chart, depicting the distribution of tree species, offered insights into the city's efforts to promote biodiversity and respond to ecological considerations. The geographic map, coupled with the internal graph showing tree counts percentile, highlighted hotspots of tree density and success in planting initiatives. These insights were not just analytical observations but windows into the dynamic interplay between urban planning, environmental consciousness, and community engagement.
+
+>The significance of the project extended beyond the technical realm into the broader context of environmental sustainability and urban development. Policymakers and urban planners could leverage the insights to make informed decisions about future tree planting initiatives, addressing areas with lower tree counts and celebrating successful urban greening initiatives. The project, therefore, became a microcosm of the potential impact data-driven insights can have on shaping sustainable and resilient cities.
+
+>In conclusion, the journey of creating the San Francisco Trees project was transformative, offering a synthesis of technical skills, data visualization principles, and a deeper appreciation for the intricate relationship between data and impactful narratives. The challenges encountered were not obstacles but opportunities for growth and learning, emphasizing the importance of resilience in navigating the complexities of real-world datasets. The project's thematic evolution, from data exploration to a cohesive data story, reflected the iterative nature of data analysis and storytelling. Through the integration of learned concepts, exploration of external resources, and a commitment to creating an engaging and informative narrative, the project stands as a testament to the multifaceted nature of data science and its potential to contribute meaningfully to our understanding of the world.
+
+### Reference Links
+
+> R for Data Science. (2020, January 28). San Francisco Trees. TidyTuesday. https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-01-28#get-the-data-here
